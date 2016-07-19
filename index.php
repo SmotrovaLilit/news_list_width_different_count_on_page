@@ -53,7 +53,8 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "news.list", array(
     "DISPLAY_NAME" => "Y",
     "DISPLAY_PICTURE" => "Y",
     "DISPLAY_PREVIEW_TEXT" => "Y",
-    "AJAX_OPTION_ADDITIONAL" => ""
+    "AJAX_OPTION_ADDITIONAL" => "",
+    "FIRST_PAGE_IDS" => $_REQUEST["FIRST_PAGE_IDS"],
 ),
     false
 );
