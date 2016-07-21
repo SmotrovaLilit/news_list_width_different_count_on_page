@@ -5,7 +5,7 @@
 
 ### Вызов компонента
 
-```
+```php
 global $arFilter;
 if ($_REQUEST["FIRST_PAGE_IDS"]) { //исключаем новости, которые были на первой странице
     $arFilter = array(
@@ -75,7 +75,7 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "news.list", array(
 ```
 
 ### Шаблон компонета списка новостей
-```
+```php
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <?php
 $ajax = false;
@@ -111,7 +111,7 @@ global $APPLICATION;
 } ?>
 ```
 ### скрипт для запроса на получения контента со следующей страницы
-```
+```php
 (function($) {
     $(function() {
         var container_list_selector = '.news-list',
@@ -157,6 +157,6 @@ global $APPLICATION;
 ```
 ### Шаблон компонента пагинации
 В ссылке необходимо передать data атрибут
-```
+```php
 data-first_page_url="<?=$arResult['sUrlPathParams']; ?>PAGEN_<?=$arResult["NavNum"]?>=1&SIZEN_<?=$arResult["NavNum"]?>=<?=$arResult['NavPageSize']; ?>"
 ```
